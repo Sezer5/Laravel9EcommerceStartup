@@ -14,7 +14,7 @@ class HomeController extends Controller
         return view('home.test');
     }
     public function param($id,$number){
-        
+
         echo "Parameter 1:",$id;
         echo "Parameter 2:",$number;
         echo "Parameter 2:",$number + $id;
@@ -22,9 +22,22 @@ class HomeController extends Controller
                     [
             'id' => $id,
             'number' => $number,
-            
-            
+
+
         ]);
-        
+
+    }
+
+    public function save(Request $request){
+       // echo "Index Function";
+       // echo "Name:",$_REQUEST["fname"];
+       // echo "LastName:",$_REQUEST["lname"];
+      return view('home.test2',
+            [
+                'fname' => $_REQUEST["fname"],
+                'lname' => $_REQUEST["lname"]
+
+
+            ]);
     }
 }

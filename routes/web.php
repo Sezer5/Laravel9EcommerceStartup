@@ -46,6 +46,9 @@ Route::get('/param/{id}', [HomeController::class,'param'])->name('param');
 
 Route::get('/param/{id}/{number}', [HomeController::class,'param'])->name('param');
 
+// 6- Save Parameter
+
+Route::post('/save', [HomeController::class,'save'])->name('save');
 
 Route::middleware([
     'auth:sanctum',
